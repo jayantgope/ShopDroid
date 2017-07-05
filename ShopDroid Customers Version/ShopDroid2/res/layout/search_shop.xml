@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+   	android:layout_height="match_parent"
+   	android:background="@color/common_blue">
+   	
+	<LinearLayout
+	    android:orientation="vertical"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:background="@color/common_blue">
+	    
+		<TextView 
+		    android:textSize="20sp"
+		    android:textColor="@color/subtitle_fground" 
+		    android:background="@drawable/shining_black"
+		    android:gravity="center" 
+		    android:layout_width="fill_parent" 
+		    android:layout_height="36dp" 
+		    android:text="Search Shop" />
+	
+	     <TextView
+	         android:layout_width="match_parent"
+	         android:layout_height="wrap_content"
+	         android:text="Select State:"
+	       	 android:textAppearance="?android:attr/textAppearanceLarge"
+	         android:textSize="16sp" />
+
+	     <Spinner
+	         android:id="@+id/spState"
+	         android:layout_width="match_parent"
+	         android:layout_height="wrap_content"/>
+	     
+	      <TextView
+	          android:layout_marginTop="10dp"
+	          android:layout_width="match_parent"
+	          android:layout_height="wrap_content"
+	          android:text="Select City:"
+	          android:textAppearance="?android:attr/textAppearanceLarge"
+	          android:textSize="16sp" />
+	      
+	      <Spinner
+	         android:id="@+id/spCity"
+	         android:layout_width="match_parent"
+	         android:layout_height="wrap_content"/>
+	       
+	        <TextView
+	            android:layout_marginTop="5dp"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:text="Enter Pincode (If Known):"
+	            android:textAppearance="?android:attr/textAppearanceLarge"
+	            android:textSize="16sp" />
+	        
+	        <EditText
+	             android:id="@+id/etPincode"
+	             android:layout_width="match_parent"
+	             android:layout_height="40dp"
+	             android:singleLine="true"
+	             android:maxLength="6"
+	             android:inputType="number"
+	             android:textSize="16dp" />
+	     	
+			<TableLayout
+		       android:layout_width="match_parent"
+		       android:layout_height="wrap_content"
+		       android:layout_marginTop="5dp">
+		       	<TableRow
+		           	android:layout_width="match_parent"
+	           		android:layout_height="match_parent"
+		           	android:weightSum="1" >
+		           	
+					<Button
+		               	android:id="@+id/btSearch"
+		               	android:textSize="16dp"
+		               	android:layout_width="wrap_content"
+		               	android:layout_height="wrap_content"
+		               	android:layout_weight="0.5"
+	               		android:text="Search"
+		               	android:onClick="onClickSearch" />
+					
+		           	<Button
+		               	android:id="@+id/btClose"
+		               	android:layout_marginLeft="5dp"
+		               	android:textSize="16dp"
+		               	android:layout_width="wrap_content"
+		               	android:layout_height="wrap_content"
+		               	android:layout_weight="0.5"
+	               		android:text="Close"
+		               	android:onClick="onClickClose" />
+				</TableRow>
+			</TableLayout>
+	</LinearLayout>
+</ScrollView>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+	    android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:background="@color/common_blue">
+		<LinearLayout
+		    android:orientation="vertical"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:background="@color/common_blue">
+		    
+			<TextView 
+			    android:textSize="20dp"
+			    android:textColor="@color/subtitle_fground" 
+			    android:background="@drawable/shining_black"
+			    android:gravity="center" 
+			    android:layout_width="fill_parent" 
+			    android:layout_height="36dp" 
+			    android:text="Shop Registration" />
+			
+				<TableLayout
+			       android:layout_width="match_parent"
+			       android:layout_height="wrap_content"
+			       android:layout_margin="5dp" >
+			       <TableRow
+			           android:layout_width="match_parent"
+			           android:layout_height="match_parent"
+			           android:weightSum="1" >
+			
+			           <TextView
+			               android:layout_width="match_parent"
+			               android:layout_height="40dp"
+			               android:text="Username:"
+			               android:textAppearance="?android:attr/textAppearanceLarge"
+			               android:textSize="16sp" />
+			           
+			           <EditText
+			            	android:layout_marginLeft="5dp"
+			                android:id="@+id/etUsername"
+			                android:layout_width="0dp"
+			                android:layout_height="40dp"
+			                android:layout_weight="1"
+			                android:ems="10"
+			                android:maxLength="50"
+			                android:singleLine="true"
+			                android:textSize="16dp" />
+			       </TableRow>
+			       
+			       <TableRow
+			           android:layout_width="match_parent"
+			           android:layout_height="match_parent"
+			           android:weightSum="1" >
+			
+			           <TextView
+			               android:layout_width="match_parent"
+			               android:layout_height="40dp"
+			               android:text="Password:"
+			               android:textAppearance="?android:attr/textAppearanceLarge"
+			               android:textSize="16sp" />
+			           
+			           <EditText
+			            	android:layout_marginLeft="5dp"
+			                android:id="@+id/etPassword"
+			                android:layout_width="0dp"
+			                android:layout_height="40dp"
+			                android:layout_weight="1"
+			                android:ems="10"
+			                android:maxLength="50"
+			                android:singleLine="true"
+			                android:password="true"
+			                android:textSize="16dp" />
+			     	</TableRow>
+			     	
+			       <TableRow
+			           android:layout_width="match_parent"
+			           android:layout_height="match_parent"
+			           android:weightSum="1" >
+			
+			           <TextView
+			               android:layout_width="match_parent"
+			               android:layout_height="40dp"
+			               android:text="Shop Name:"
+			               android:textAppearance="?android:attr/textAppearanceLarge"
+			               android:textSize="16sp" />
+			           
+			           <EditText
+			            	android:layout_marginLeft="5dp"
+			                android:id="@+id/etShopName"
+			                android:layout_width="0dp"
+			                android:layout_height="40dp"
+			                android:layout_weight="1"
+			                android:ems="10"
+			                android:singleLine="true"
+			                android:textSize="16dp" />
+			     	</TableRow>
+			     	
+			       <TableRow
+			           android:layout_width="match_parent"
+			           android:layout_height="match_parent"
+			           android:weightSum="1" >
+			
+			           <TextView
+			               android:layout_width="match_parent"
+			               android:layout_height="40dp"
+			               android:text="Address:"
+			               android:textAppearance="?android:attr/textAppearanceLarge"
+			               android:textSize="16sp" />
+			           
+			           <EditText
+			            	android:layout_marginLeft="5dp"
+			                android:id="@+id/etAddress"
+			                android:layout_width="0dp"
+			                android:layout_height="40dp"
+			                android:layout_weight="1"
+			                android:ems="10"
+			                android:maxLength="50"
+			                android:singleLine="true"
+			                android:textSize="16dp" />
+			     	</TableRow>
+			       <TableRow
+			           android:layout_width="match_parent"
+			           android:layout_height="match_parent"
+			           android:weightSum="1" >
+			
+			           <TextView
+			               android:layout_width="match_parent"
+			               android:layout_height="40dp"
+			               android:text="State:"
+			               android:textAppearance="?android:attr/textAppearanceLarge"
+			               android:textSize="16sp" />
+			           
+			           <Spinner
+			            	android:layout_marginLeft="5dp"
+			                android:id="@+id/spnState"
+			                android:layout_width="0dp"
+			                android:layout_height="40dp"
+			                android:entries="@array/strState"
+			                android:layout_weight="1"/>
+			     	</TableRow>
+			     	<TableRow
+			           android:layout_width="match_parent"
+			           android:layout_height="match_parent"
+			           android:weightSum="1" >
+			
+			           <TextView
+			               android:layout_width="match_parent"
+			               android:layout_height="40dp"
+			               android:text="City"
+			               android:textAppearance="?android:attr/textAppearanceLarge"
+			               android:textSize="16sp" />
+			           
+			           <Spinner
+			            	android:layout_marginLeft="5dp"
+			                android:id="@+id/spnCity"
+			                android:entries="@array/strCity"
+			                android:layout_width="0dp"
+			                android:layout_height="40dp"
+			                android:layout_weight="1"/>
+			     	</TableRow>
+			     	<TableRow
+			           android:layout_width="match_parent"
+			           android:layout_height="match_parent"
+			           android:weightSum="1" >
+			
+			           <TextView
+			               android:layout_width="match_parent"
+			               android:layout_height="40dp"
+			               android:text="Pin Code:"
+			               android:textAppearance="?android:attr/textAppearanceLarge"
+			               android:textSize="16sp" />
+			           
+			           <EditText
+			            	android:layout_marginLeft="5dp"
+			                android:id="@+id/etPinCode"
+			                android:layout_width="0dp"
+			                android:layout_height="40dp"
+			                android:layout_weight="1"
+			                android:ems="10"
+			                android:numeric="integer"
+			                android:maxLength="6"
+			                android:singleLine="true"
+			                android:textSize="16dp" />
+			     	</TableRow>
+			     	<TableRow
+			           android:layout_width="match_parent"
+			           android:layout_height="match_parent"
+			           android:weightSum="1" >
+			
+			           <TextView
+			               android:layout_width="match_parent"
+			               android:layout_height="40dp"
+			               android:text="Mobile:"
+			               android:textAppearance="?android:attr/textAppearanceLarge"
+			               android:textSize="16sp" />
+			           
+			           <EditText
+			            	android:layout_marginLeft="5dp"
+			                android:id="@+id/etContactNo"
+			                android:layout_width="0dp"
+			                android:layout_height="40dp"
+			                android:layout_weight="1"
+			                android:ems="10"
+			                android:phoneNumber="true"
+			                android:singleLine="true"
+			                android:textSize="16dp" />
+			     	</TableRow>
+
+					<TableLayout
+				       android:layout_width="match_parent"
+				       android:layout_height="wrap_content"
+				       android:layout_marginTop="5dp">
+				       	<TableRow
+				           	android:layout_width="match_parent"
+			           		android:layout_height="match_parent"
+				           	android:weightSum="1" >
+				           	
+							<Button
+				               	android:id="@+id/btRegister"
+				               	android:textSize="16dp"
+				               	android:layout_width="0dp"
+				               	android:layout_height="wrap_content"
+				               	android:layout_weight="0.5"
+			               		android:text="Register"
+			               		android:onClick="onClickRegister"
+				                />
+							
+				           	<Button
+				               	android:id="@+id/btClose"
+				               	android:layout_marginLeft="5dp"
+				               	android:textSize="16dp"
+				               	android:layout_width="0dp"
+				               	android:layout_height="wrap_content"
+				               	android:layout_weight="0.5"
+			               		android:text="Close"
+				               	android:onClick="onClickClose" />
+						</TableRow>
+					</TableLayout>
+		      	</TableLayout>
+		</LinearLayout>
+</ScrollView>

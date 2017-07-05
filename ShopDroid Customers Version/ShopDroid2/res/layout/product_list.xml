@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/common_blue">
+    <TextView
+        android:layout_height="28dp"
+        android:layout_width="match_parent"
+        android:background="@color/subtitle_bground"
+        android:text="PRODUCT LIST"
+        android:textColor="@color/subtitle_fground"
+       	android:gravity="center"
+        android:textSize="20dp" />
+    
+    <LinearLayout
+        android:id="@+id/llProductListTitle" 
+        android:background="@color/list_title_bground"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:weightSum="1.0">
+        
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#22000000"
+            android:layout_weight="0.3"
+            android:padding="3dp"
+            android:text="Name"
+            android:ellipsize="end"
+			android:singleLine="true"
+            android:textColor="@color/list_title_fground"
+            android:textSize="16dp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:padding="3dp"
+            android:ellipsize="end"
+			android:singleLine="true"
+            android:text="Category"
+            android:textColor="@color/list_title_fground"
+            android:textSize="16dp" />
+        <TextView
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:background="#22000000"
+            android:padding="3dp"
+            android:text="Price"
+            android:ellipsize="end"
+			android:singleLine="true"
+            android:textColor="@color/list_title_fground"
+            android:textSize="16dp" />
+        <TextView
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:padding="3dp"
+            android:ellipsize="end"
+			android:singleLine="true"
+            android:text="Stock"
+            android:textColor="@color/list_title_fground"
+            android:textSize="16dp" />
+         <TextView
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:background="#22000000"
+            android:padding="3dp"
+            android:text="Shop"
+            android:ellipsize="end"
+			android:singleLine="true"
+            android:textColor="@color/list_title_fground"
+            android:textSize="16dp" />
+    </LinearLayout>
+     <ListView
+        android:id="@+id/lvProductList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#0000" />
+    
+</LinearLayout>

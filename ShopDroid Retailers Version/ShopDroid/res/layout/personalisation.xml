@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_blue">
+    
+	<TextView 
+	    android:textSize="20dp"
+	    android:textColor="@color/subtitle_fground" 
+	    android:background="@drawable/shining_black"
+	    android:gravity="center" 
+	    android:layout_width="fill_parent" 
+	    android:layout_height="36dp" 
+	    android:text="Personalisation" />
+	<ScrollView 
+	    android:layout_width="match_parent"
+    	android:layout_height="match_parent">
+    	
+		<TableLayout
+	       android:layout_width="match_parent"
+	       android:layout_height="wrap_content"
+	       android:layout_margin="5dp" >
+	       <TableRow
+	           android:layout_width="match_parent"
+	           android:layout_height="match_parent"
+	           android:weightSum="1" >
+	
+	           <TextView
+	               android:id="@+id/tvDateFormat"
+	               android:layout_width="match_parent"
+	               android:layout_height="40dp"
+	               android:text="Date Format:"
+	               android:textAppearance="?android:attr/textAppearanceLarge"
+	               android:textSize="16sp" />
+	           
+	           <Button
+	               android:id="@+id/btDateFormat"
+	               android:layout_marginLeft="5dp"
+	               android:textSize="16dp"
+	               android:layout_width="match_parent"
+	               android:layout_height="wrap_content"
+	               android:layout_weight="1"
+	               android:text="MM/DD/YYYY"
+	               android:onClick="onClickDateFormat" />
+	       </TableRow>
+	       
+	       <TableRow
+	           android:layout_width="match_parent"
+	           android:layout_height="match_parent"
+	           android:weightSum="1" >
+	
+	           <TextView
+	               android:layout_width="match_parent"
+	               android:layout_height="40dp"
+	               android:text="PDF Paper Size:"
+	               android:textAppearance="?android:attr/textAppearanceLarge"
+	               android:textSize="16sp" />
+	           
+	           <Button
+	               android:id="@+id/btPdfPaperSize"
+	               android:layout_marginLeft="5dp"
+	               android:textSize="16dp"
+	               android:layout_width="match_parent"
+	               android:layout_height="wrap_content"
+	               android:layout_weight="1"
+	               android:text="Letter - 11 x 8.5"
+	               android:onClick="onClickPdfPaperSize" />
+	       </TableRow>
+	       
+	       <TableRow
+	           android:layout_width="match_parent"
+	           android:layout_height="match_parent"
+	           android:weightSum="1" >
+	
+	           <TextView
+	               android:layout_width="match_parent"
+	               android:layout_height="40dp"
+	               android:text="Currency:"
+	               android:textAppearance="?android:attr/textAppearanceLarge"
+	               android:textSize="16sp" />
+	           
+	           <EditText
+	            	android:layout_marginLeft="5dp"
+	                android:id="@+id/etCurrency"
+	                android:layout_width="match_parent"
+	                android:layout_height="40dp"
+	                android:layout_weight="1"
+	                android:ems="10"
+	                android:text="$"
+	                android:maxLength="10"
+	                android:singleLine="true"
+	                android:textSize="16dp" />
+	     	</TableRow>
+	     	
+	       	<TableRow
+	           	android:layout_width="match_parent"
+           		android:layout_height="match_parent"
+	           	android:weightSum="1" >
+		
+	           	<TextView
+	               	android:layout_width="match_parent"
+	               	android:layout_height="40dp"
+	               	android:text="Password Check:"
+	               	android:textAppearance="?android:attr/textAppearanceLarge"
+	               	android:textSize="16sp" />
+		           
+	           	<Button
+	               	android:id="@+id/btPasswordCheck"
+	               	android:layout_marginLeft="5dp"
+	               	android:textSize="16dp"
+	               	android:layout_width="match_parent"
+	               	android:layout_height="wrap_content"
+	               	android:layout_weight="1"
+               		android:text="Disabled"
+	               	android:onClick="onClickPasswordCheck" />
+			</TableRow>
+			<TableLayout
+		       android:layout_width="match_parent"
+		       android:layout_height="wrap_content"
+		       android:layout_marginTop="5dp">
+		       	<TableRow
+		           	android:layout_width="match_parent"
+	           		android:layout_height="match_parent"
+		           	android:weightSum="1" >
+		           	
+					<Button
+		               	android:id="@+id/btApply"
+		               	android:textSize="16dp"
+		               	android:layout_width="wrap_content"
+		               	android:layout_height="wrap_content"
+		               	android:layout_weight="0.5"
+	               		android:text="Apply"
+		               	android:onClick="onClickApply" />
+					
+		           	<Button
+		               	android:id="@+id/btClose"
+		               	android:layout_marginLeft="5dp"
+		               	android:textSize="16dp"
+		               	android:layout_width="wrap_content"
+		               	android:layout_height="wrap_content"
+		               	android:layout_weight="0.5"
+	               		android:text="Close"
+		               	android:onClick="onClickClose" />
+				</TableRow>
+			</TableLayout>
+      	</TableLayout>
+      	
+    </ScrollView>
+</LinearLayout>

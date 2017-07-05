@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <TextView 
+        android:textColor="@color/subtitle_fground" 
+	    android:background="@drawable/shining_black"
+	    android:textSize="20dp"
+	    android:gravity="center" 
+	    android:layout_width="match_parent" 
+	    android:layout_height="36dp" 
+	    android:text="Select Report Options" />
+    
+    <LinearLayout 
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+    	android:gravity="center"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        android:weightSum="1">
+        
+        <Button 
+            android:id="@+id/btPdfReport"
+            android:text="PDF Reports"
+            android:drawableTop="@drawable/ic_pdf_reports"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:onClick="pdfReports"
+            android:layout_weight="0.5"/>
+        
+        <Button 
+            android:id="@+id/btGraphicalReports"
+            android:text="Graphical Reports"
+            android:drawableTop="@drawable/ic_graphical_reports"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:onClick="graphicalReports"
+            android:layout_weight="0.5"/>
+    </LinearLayout>
+    <LinearLayout 
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        
+        <Button 
+            android:id="@+id/btCancel"
+            android:text="@string/cancel_product"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:onClick="onClickCancel"/>
+ 	</LinearLayout>
+    
+    
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="lib" path="D:/8 Sem/FYP/ShopDroid 2/Shopdroid/android part/ShopDroid2/libs/android-async-http-1.4.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="J:/Android Things/Android--10-steps-to-integrate-dropbox-api--demo-project-master/libs/dropbox-android-sdk.jar"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry exported="true" kind="lib" path="J:/Android Things/zxing-2.1/core/core.jar"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry exported="true" kind="lib" path="J:/Android Things/Downloaded Projects/itextpdf-5.2.1.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

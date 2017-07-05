@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_blue" >
+
+    <LinearLayout
+        android:id="@+id/ReportsMainBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <LinearLayout 
+            android:orientation="vertical" 
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+               	android:background="@color/common_blue"
+                android:layout_gravity="center">
+                
+                <TextView 
+                    android:textSize="20dp" 
+                    android:textColor="@color/subtitle_fground"
+                    android:background="@drawable/shining_black"
+                    android:gravity="center"
+                    android:layout_height="32dp"
+                    android:layout_width="match_parent"
+                    android:text="Select Report Type" />
+                
+                <RadioGroup 
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/rgbReportType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+	                android:paddingLeft="5dp" 
+	                android:paddingRight="5dp">
+                    
+                    <RadioButton 
+                        android:id="@+id/rbProductList"
+                        android:textSize="16dp"
+                        android:textColor="@android:color/white"
+                        android:checked="true" 
+                        android:text="Product List" />
+                    
+                    <RadioButton 
+                        android:id="@+id/rbTransaction"
+                        android:textSize="16dp"
+                        android:textColor="@android:color/white"
+                        android:checked="false" 
+                        android:text="Transaction" />
+                    
+                    <RadioButton 
+                        android:id="@+id/rbInventoryStatus"
+                        android:textSize="16dp" 
+                        android:textColor="@android:color/white"
+                        android:checked="false" 
+                        android:text="Inventory Status" />
+                    
+                </RadioGroup>
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:background="#bbb" 
+                android:orientation="vertical">
+                
+                <TextView 
+                    android:id="@+id/tvReportOptions"
+                    android:textSize="20dp" 
+                    android:textColor="@color/subtitle_fground"
+                    android:background="@drawable/shining_black"
+                    android:layout_height="32dp"
+                    android:layout_width="match_parent"
+                    android:text="Report Options"
+                    android:gravity="center" />
+                <LinearLayout 
+	                android:id="@+id/llTransactionOptions"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+	                android:paddingLeft="5dp" 
+	                android:paddingRight="5dp">
+                    
+                    <LinearLayout 
+                        android:orientation="horizontal" 
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent">
+                        
+                        <TextView 
+                            android:id="@+id/tvDateFrom"
+                            android:textSize="16dp" 
+                            android:textColor="#000" 
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Date from :"
+                            android:visibility="gone" />
+                        
+                        <Button 
+                            android:id="@+id/btDateFrom"
+                            android:textSize="16dp" 
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content" 
+                            android:text="Date from"
+                            android:onClick="onDateFromClick"
+                            android:visibility="gone" />
+                        
+                    </LinearLayout>
+                    
+                    <LinearLayout 
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content">
+                        
+                        <TextView 
+                            android:id="@+id/tvDateTo"
+                            android:textSize="16dp" 
+                            android:textColor="#000" 
+                            android:layout_width="100dp" 
+                            android:layout_height="wrap_content"
+                            android:text="Date to :"
+                            android:visibility="gone" />
+                        
+                        <Button 
+                            android:id="@+id/btDateTo"
+                            android:textSize="16dp"
+                            android:layout_width="120dp" 
+                            android:layout_height="wrap_content"
+                            android:text="Date to"
+                            android:onClick="onDateToClick"
+                            android:visibility="gone" />
+                        
+                    </LinearLayout>
+                    
+                    <RadioGroup 
+                        android:id="@+id/rgbDetailedSummary"
+                        android:orientation="horizontal" 
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:visibility="gone">
+                        
+                        <RadioButton 
+							android:id="@+id/rbDetailed"
+                            android:textSize="16dp" 
+                            android:textColor="#000"
+                            android:checked="true" 
+                            android:text="Detailed" />
+                        
+                        <RadioButton 
+                            android:id="@+id/rbSummary"
+                            android:textSize="16dp" 
+                            android:textColor="#000"
+                            android:layout_marginLeft="10dp" 
+                            android:checked="false" 
+                            android:text="Summary" />
+                        
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llProductListOptions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                    
+                    <RadioGroup  
+                        android:id="@+id/rgbProductListOptions"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        
+                        <RadioButton 
+                            android:id="@+id/rbSortByProductCode"
+                            android:textSize="16dp" 
+                            android:textColor="#000" 
+                            android:checked="true" 
+                            android:text="Sort by product code" />
+                        
+                        <RadioButton 
+                            android:id="@+id/rbSortByProductName"
+                            android:textSize="16dp" 
+                            android:textColor="#000" 
+                            android:checked="false" 
+                            android:text="Sort by product name" />
+                        
+                        <RadioButton 
+                            android:id="@+id/rbSortByCategories"
+                            android:textSize="16dp" 
+                            android:textColor="#000" 
+                            android:checked="false" 
+                            android:text="Sort by categories" />
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+            
+            <LinearLayout 
+            android:orientation="vertical" 
+            android:background="#999" 
+            android:paddingTop="3dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+                <TextView 
+	                    android:textSize="20dp" 
+	                    android:textColor="@color/subtitle_fground"
+	                    android:background="@drawable/shining_black"
+	                    android:layout_height="32dp"
+	                    android:layout_width="match_parent"
+	                    android:text="Output"
+	                    android:gravity="center" />
+                
+                <LinearLayout 
+		            android:orientation="horizontal" 
+		            android:background="#999" 
+		            android:paddingTop="3dp"
+		            android:paddingLeft="5dp"
+		            android:paddingRight="5dp"
+		            android:layout_height="wrap_content"
+		            android:layout_width="match_parent">
+	                
+	                
+		            <TextView 
+		                android:textSize="16dp" 
+		                android:textColor="#000" 
+		                android:text="Output file : "
+		                android:layout_height="wrap_content"
+		                android:layout_width="wrap_content" />
+		            
+		            <TextView 
+		                android:textSize="18dp" 
+		                android:textColor="#fff" 
+		                android:text="/reports/"
+		                android:layout_height="wrap_content"
+		                android:layout_width="wrap_content" />
+		            
+		            <EditText 
+		                android:id="@+id/etReportName"
+		                android:textSize="18dp" 
+		                android:layout_width="180dp" 
+		                android:layout_height="wrap_content"
+		                android:text="Report" 
+		                android:scrollHorizontally="true" 
+		                android:singleLine="true" 
+		                android:maxLength="50" />
+		            
+		            <TextView 
+		                android:textSize="18dp" 
+		                android:textColor="#fff" 
+		                android:text=".pdf"
+		                android:layout_height="wrap_content"
+		                android:layout_width="match_parent" />
+		            
+	            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal" 
+            android:background="#999" 
+            android:paddingLeft="5dp" 
+            android:paddingRight="5dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            
+            <Button 
+                android:textSize="16dp"
+                android:text="Process" 
+                android:layout_weight="1.0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClickProcess" />
+            
+            <Button 
+                android:textSize="16dp"
+                android:text="Cancel" 
+                android:layout_weight="1.0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+

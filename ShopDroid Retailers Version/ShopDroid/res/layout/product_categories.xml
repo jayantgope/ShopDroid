@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/common_blue"
+    android:layout_gravity="center_vertical">
+    
+	<TextView 
+	    android:textSize="20dp"
+	    android:textColor="@color/subtitle_fground" 
+	    android:background="@drawable/shining_black"
+	    android:gravity="center" 
+	    android:layout_width="fill_parent" 
+	    android:layout_height="36dp" 
+	    android:text="Categories" />
+	
+	<ListView 
+	    android:layout_marginTop="5dp"
+	    android:id="@+id/lvProductCategories" 
+	    android:background="@color/setup_list_bground" 
+	    android:padding="2dp" 
+	    android:layout_width="match_parent" 
+	    android:layout_height="170dp" 
+	    android:cacheColorHint="#00000000" />
+	
+	<LinearLayout 
+	    android:orientation="horizontal"
+	    android:layout_marginTop="5dp"
+	    android:layout_width="match_parent" 
+	    android:layout_height="wrap_content"
+	    android:weightSum="1">
+	    
+	    <Button 
+	        android:textSize="14dp" 
+	        android:id="@+id/btNew"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" 
+	        android:text="New"
+	        android:layout_weight="0.3"
+	        android:onClick="onClickNew"/>
+	    
+	    <Button 
+	        android:textSize="14dp" 
+	        android:id="@+id/btDelete"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" 
+	        android:text="Delete"
+	        android:layout_weight="0.4"
+	        android:onClick="onClickDelete"/>
+	    
+	    <Button 
+	        android:textSize="14dp"
+	        android:id="@+id/btClose"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" 
+	        android:text="Close"
+	        android:onClick="onClickClose"
+	        android:layout_weight="0.3"/>
+	    
+    </LinearLayout>
+    
+</LinearLayout>

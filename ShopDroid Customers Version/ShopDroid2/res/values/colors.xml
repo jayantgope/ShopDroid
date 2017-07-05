@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="result_image_border">#ffffffff</color>
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c000ff00</color>
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="common_blue">#ff486888</color>
+    <color name="tran_text_color">#ffeeeeee</color>
+    <color name="subtitle_bground">#ff000000</color>
+    <color name="subtitle_fground">#ffeeeeee</color>
+    <color name="list_title_fground">#ffc3e3f3</color>
+    <color name="list_title_bground">#88000000</color>
+    <color name="list_text_color">#ffdddddd</color>
+    <color name="list_sort_color">#ffeeddff</color>
+    <color name="setup_list_bground">#ffaaabac</color>
+    <color name="setup_list_selected">#ff005aa0</color>
+</resources>

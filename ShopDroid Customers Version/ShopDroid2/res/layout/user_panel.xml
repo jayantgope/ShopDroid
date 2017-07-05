@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.shopdroid2.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_blue">
+    
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="2dp"
+    android:gravity="center_horizontal"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+    
+    <TableLayout 
+        android:id="@+id/tlAppName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/common_blue">
+        
+        <TableRow 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shopdroid_icon"
+                android:layout_weight="0.4" />
+            
+            <TextView 
+                android:id="@+id/tvAppName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/app_name"
+                android:gravity="center"
+                android:textSize="36sp"
+                android:layout_weight="0.6"
+                android:textColor="@color/subtitle_fground"/>
+	    
+	    </TableRow>
+        
+    </TableLayout>
+
+    <TableLayout
+        android:layout_below="@+id/tlAppName"
+        android:layout_marginTop="5dp"
+        android:id="@+id/TableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TableRow 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_marginTop="5dp">
+ 
+		    <Button
+		        android:id="@+id/btLocateShop"
+		        android:layout_width="0dp"
+		        android:layout_height="match_parent"
+		        android:layout_alignParentLeft="true"
+		        android:textSize="16sp"
+		        android:layout_alignParentTop="true"
+		        android:onClick="nearestShop"
+		        android:text="Locate Nearest Shop"
+		        android:layout_weight="1.0"
+		        android:drawableLeft="@drawable/ic_map" />
+	   
+	    </TableRow>
+        <TableRow 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+ 			<Button
+		        android:id="@+id/btSelectShop"
+		        android:layout_width="0dp"
+		        android:layout_height="match_parent"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignParentTop="true"
+		        android:onClick="addListenerOnSelectShop"
+		        android:text="Select Shop"
+		        android:layout_weight="1"
+		        android:visibility="gone"
+		        android:drawableLeft="@drawable/ic_shop" />
+		    <!--  <Button
+		        android:id="@+id/btNewProductEntry"
+		        android:layout_width="0dp"
+		        android:layout_height="match_parent"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignParentTop="true"
+		        android:layout_weight="0.5"
+		        android:text="Search Products"
+		        android:onClick="addListenerOnSearchProducts"
+		        android:drawableLeft="@drawable/ic_add_product"/> -->
+		    
+	    </TableRow>
+	    
+        
+	    <TableRow 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+		    
+		    <Button
+		        android:id="@+id/btLogin"
+		        android:layout_width="0dp"
+		        android:layout_height="match_parent"
+		     
+		        android:layout_weight="1.0"
+		        android:drawableLeft="@drawable/ic_password"
+		     android:onClick="logout"
+		        android:text="Logout"
+		        android:textSize="16sp" />
+	    
+	    </TableRow>
+	    
+       <TableRow 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_marginTop="5dp">
+ 
+		    
+	    </TableRow>
+	    
+	    
+    
+     </TableLayout>
+
+</RelativeLayout>
+</ScrollView>

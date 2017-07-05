@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/common_blue">
+
+    <LinearLayout
+        android:id="@+id/ReportsMainBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <LinearLayout 
+            android:orientation="vertical" 
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+               	android:background="@color/common_blue"
+                android:layout_gravity="center">
+                
+                <TextView 
+                    android:textSize="20dp" 
+                    android:textColor="@color/subtitle_fground"
+                    android:background="@drawable/shining_black"
+                    android:gravity="center"
+                    android:layout_height="32dp"
+                    android:layout_width="match_parent"
+                    android:text="Graph Data" />
+                
+                <RadioGroup 
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/rgbGraphType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+	                android:paddingLeft="5dp" 
+	                android:paddingRight="5dp">
+                    
+                    <RadioButton 
+                        android:id="@+id/rbTransaction"
+                        android:textSize="16dp" 
+                        android:textColor="@android:color/white"
+                        android:checked="true" 
+                        android:text="Transaction" />
+                    
+                    <RadioButton 
+                        android:id="@+id/rbStockStatus"
+                        android:textSize="16dp" 
+                        android:textColor="@android:color/white"
+                        android:checked="false" 
+                        android:text="Stock Status" />
+                    
+                </RadioGroup>
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:background="#bbb" 
+                android:orientation="vertical">
+                
+                <TextView 
+                    android:id="@+id/tvReportOptions"
+                    android:textSize="20dp" 
+                    android:textColor="@color/subtitle_fground"
+                    android:background="@drawable/shining_black"
+                    android:layout_height="32dp"
+                    android:layout_width="match_parent"
+                    android:text="Graph Options"
+                    android:gravity="center" />
+                <LinearLayout 
+	                android:id="@+id/llTransactionOptions"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+	                android:paddingLeft="5dp" 
+	                android:paddingRight="5dp">
+                    
+                    <LinearLayout 
+                        android:orientation="horizontal" 
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent">
+                        
+                        <TextView 
+                            android:id="@+id/tvDateFrom"
+                            android:textSize="16dp" 
+                            android:textColor="#000" 
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Date from :"/>
+                        
+                        <Button 
+                            android:id="@+id/btDateFrom"
+                            android:textSize="16dp" 
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" 
+                            android:text="Date from"
+                            android:onClick="onDateFromClick" />
+                        
+                    </LinearLayout>
+                    
+                    
+                    <LinearLayout 
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent">
+                        
+                        <TextView 
+                            android:id="@+id/tvDateTo"
+                            android:textSize="16dp" 
+                            android:textColor="#000" 
+                            android:layout_width="100dp" 
+                            android:layout_height="wrap_content"
+                            android:text="Date to :"/>
+                        
+                        <Button 
+                            android:id="@+id/btDateTo"
+                            android:textSize="16dp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="Date to" 
+                            android:onClick="onDateToClick"/>
+                        
+                    </LinearLayout>
+                    
+                    <LinearLayout 
+                        android:orientation="horizontal" 
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent">
+                        
+                        <TextView 
+                            android:id="@+id/tvTransactionType"
+                            android:textSize="16dp" 
+                            android:textColor="#000" 
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Transaction Type :"/>
+                        
+                        <Spinner
+			                android:id="@+id/spnTransactionType"
+			                android:layout_width="match_parent"
+			                android:layout_height="wrap_content"
+			                
+			                android:entries="@array/strTransactionTypes"/>
+                        
+                    </LinearLayout>
+                    
+                    <LinearLayout 
+                        android:orientation="horizontal" 
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent">
+                        
+                        <TextView 
+                            android:id="@+id/tvXAxis"
+                            android:textSize="16dp" 
+                            android:textColor="#000" 
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Y - Axis :"/>
+                        
+                        <Button 
+                            android:id="@+id/btXAxis"
+                            android:textSize="16dp" 
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" 
+                            android:text="Quantity"
+                            android:onClick="onClickXAxis" />
+                        
+                    </LinearLayout>
+                    
+                    <LinearLayout 
+                        android:orientation="horizontal" 
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent">
+                        
+                        <TextView 
+                            android:id="@+id/tvYAxis"
+                            android:textSize="16dp" 
+                            android:textColor="#000" 
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="X - Axis :"/>
+                        
+                        <Button 
+                            android:id="@+id/btYAxis"
+                            android:textSize="16dp" 
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" 
+                            android:text="Transaction Types"
+                            android:onClick="onClickYAxis" />
+                        
+                    </LinearLayout>
+                    
+                    <LinearLayout 
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent">
+                        
+                        <TextView 
+                            android:id="@+id/tvDataXAxis"
+                            android:textSize="16dp" 
+                            android:textColor="#000" 
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Data Y - Axis :"
+                            android:visibility="gone"/>
+                        
+                        <Button 
+                            android:id="@+id/btDataXAxis"
+                            android:textSize="16dp" 
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" 
+                            android:text="Quantity"
+                            android:visibility="gone"
+                            android:onClick="onClickDataXAxis" />
+                        
+                    </LinearLayout>
+                    
+                    <LinearLayout 
+                        android:orientation="horizontal" 
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent">
+                        
+                        <TextView 
+                            android:id="@+id/tvDataYAxis"
+                            android:textSize="16dp" 
+                            android:textColor="#000" 
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Data X - Axis :"
+                            android:visibility="gone"/>
+                        
+                        <Button 
+                            android:id="@+id/btDataYAxis"
+                            android:textSize="16dp" 
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" 
+                            android:text="Products"
+                            android:visibility="gone"
+                            android:onClick="onClickDataYAxis" />
+                        
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal" 
+            android:background="#999" 
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp" 
+            android:paddingRight="5dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            
+            <Button 
+                android:textSize="16dp"
+                android:text="Process" 
+                android:layout_weight="1.0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClickProcess" />
+            
+            <Button 
+                android:textSize="16dp"
+                android:text="Cancel" 
+                android:layout_weight="1.0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+

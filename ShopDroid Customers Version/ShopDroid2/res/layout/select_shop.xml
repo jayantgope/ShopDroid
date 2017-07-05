@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/common_blue">
+    <TextView
+        android:layout_height="28dp"
+        android:layout_width="match_parent"
+        android:background="@color/subtitle_bground"
+        android:text=" SELECTED SHOP"
+        android:textColor="@color/subtitle_fground"
+       	android:gravity="center"
+        android:textSize="20dp" />
+    <LinearLayout
+        android:background="@color/list_title_bground"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:weightSum="1.0">
+        
+        <TextView
+            android:id="@+id/tvShopName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:padding="3dp"
+            android:text="Nanosoft"
+            android:textColor="@color/list_title_fground"
+            android:textSize="16dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llProductListTitle" 
+        android:background="@color/list_title_bground"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:weightSum="1.0">
+        
+        <TextView
+            android:id="@+id/tvShopId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:padding="3dp"
+            android:text="Do Bhai Store"
+            android:textColor="@color/list_title_fground"
+            android:textSize="16dp" />
+    </LinearLayout>
+	<LinearLayout
+        android:background="@color/list_title_bground"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:weightSum="1.0"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvShopAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:text="Insar Bazar, Panipat, Haryana, 132103."
+            android:textColor="@color/list_title_fground"
+            android:textSize="16dp" />
+        <TableRow 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_marginTop="5dp">
+ 			<Button
+		        android:id="@+id/btSelectShop"
+		        android:layout_width="0dp"
+		        android:layout_height="match_parent"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignParentTop="true"
+		        android:onClick="addListenerOnSearchProducts"
+		        android:text="Search Products"
+		        android:layout_weight="1.0"
+		        android:drawableLeft="@drawable/ic_add_product" />
+		    
+	    </TableRow>
+	    <TableRow 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_marginTop="5dp">
+ 			<Button
+		        android:id="@+id/btRemoveShop"
+		        android:layout_width="0dp"
+		        android:layout_height="match_parent"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignParentTop="true"
+		        android:onClick="addListenerOnRemoveShop"
+		        android:text="Remove Selected Shop"
+		        android:layout_weight="1.0"
+		        android:drawableLeft="@drawable/btn_ic_del"/>
+		    
+	    </TableRow>
+    </LinearLayout>
+</LinearLayout>

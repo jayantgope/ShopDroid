@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.shopdroid.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_blue">
+    
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    
+    <TableLayout 
+        android:id="@+id/tlAppName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <TableRow 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/common_blue"
+           	android:layout_gravity="center"
+           	android:weightSum="1">
+		     <TextView 
+		         android:textSize="20dp" 
+		         android:textColor="@color/subtitle_fground"
+		         android:background="@drawable/shining_black"
+		         android:gravity="center"
+		         android:layout_height="40dp"
+		         android:text="Settings"
+		         android:layout_weight="1"/>
+	    </TableRow>
+        
+    </TableLayout>
+
+    <TableLayout
+        android:layout_below="@+id/tlAppName"
+        android:id="@+id/TableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+        
+        <TableRow 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_marginLeft="10dp"
+        	android:layout_marginRight="10dp"
+        	android:layout_marginTop="5dp" >
+ 
+		    <Button
+		        android:id="@+id/btProductCaregories"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignParentTop="true"
+		        android:textSize="18sp"
+		        android:onClick="addListenerOnProductCategories"
+		        android:text="Product Categories"
+		        android:drawableLeft="@drawable/ic_add_product"
+		        android:layout_weight="1"/>
+	    </TableRow>
+	    
+        <TableRow
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_marginLeft="10dp"
+        	android:layout_marginRight="10dp"
+        	android:layout_marginTop="5dp" >
+ 
+		    <Button
+		        android:id="@+id/btPersonalisation"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignParentTop="true"
+		        android:textSize="18sp"
+		        android:onClick="addListenerOnPersonalisation"
+		        android:text="Personalisation"
+		        android:drawableLeft="@drawable/ic_personalisation"
+		        android:layout_weight="1" />
+	    </TableRow>
+	    
+       <TableRow 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_marginLeft="10dp"
+        	android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp">
+ 
+		    <Button
+		        android:id="@+id/btPasswordSettings"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignParentTop="true"
+		        android:textSize="18sp"
+		        android:onClick="addListenerOnPasswordSettings"
+		        android:text="Password Settings"
+		        android:drawableLeft="@drawable/ic_password"
+		        android:layout_weight="1" />
+	    
+	    </TableRow>
+    
+     </TableLayout>
+
+</RelativeLayout>
+</ScrollView>

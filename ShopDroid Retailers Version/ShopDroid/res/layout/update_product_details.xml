@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shining_black"
+            android:weightSum="1">
+            <TextView
+               android:id="@+id/tvAddProduct"
+               android:layout_width="0dp"
+               android:layout_height="40dp"
+               android:gravity="center"
+               android:text="Update Product Details"
+               android:textColor="@color/subtitle_fground"
+               android:textAppearance="?android:attr/textAppearanceLarge"
+               android:layout_weight="1"/>
+        </TableRow>
+        <TableRow
+            android:id="@+id/trActionBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shining_black"
+            android:weightSum="1">
+            
+            <Button
+	            android:id="@+id/btEditButton"
+	            android:layout_width="0dp"
+	            android:layout_height="40dp"
+	            android:text="Edit"
+	            android:layout_weight="0.33"
+	            android:drawableLeft="@drawable/btn_ic_edit"
+	            android:onClick="onEdit" />
+            
+            <Button
+	            android:id="@+id/btDeleteButton"
+	            android:layout_width="0dp"
+	            android:layout_height="40dp"
+	            android:text="Delete"
+	            android:layout_weight="0.33"
+	            android:drawableLeft="@drawable/btn_ic_del"
+	            android:onClick="onDelete" />
+              
+            <Button
+	            android:id="@+id/btCancelButton"
+	            android:layout_width="0dp"
+	            android:layout_height="40dp"
+	            android:text="@string/cancel_product"
+	            android:layout_weight="0.33"
+	            android:drawableLeft="@drawable/btn_ic_revert"
+	            android:onClick="onClose" />
+            <Button
+	            android:id="@+id/btUSave"
+	            android:layout_width="0dp"
+	            android:layout_height="40dp"
+	            android:text="Save"
+	            android:layout_weight="0.5"
+	            android:drawableLeft="@drawable/btn_ic_save"
+	            android:visibility="gone"
+	            android:onClick="onClickSave" />
+            
+            <Button
+	            android:id="@+id/btUCancel"
+	            android:layout_width="0dp"
+	            android:layout_height="40dp"
+	            android:text="Cancel"
+	            android:layout_weight="0.5"
+	            android:visibility="gone"
+	            android:drawableLeft="@drawable/btn_ic_revert"
+	            android:onClick="onCancel" />
+        </TableRow>
+    </TableLayout>
+	<ScrollView 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:background="@color/common_blue">
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical">
+		    <TableLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_margin="5dp" >
+		
+		        <TableRow
+		            android:id="@+id/trProductCode"
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:weightSum="1" >
+		
+		            <TextView
+		                android:id="@+id/tvProductCode"
+		                android:layout_width="match_parent"
+		                android:layout_height="40dp"
+		                android:text="@string/product_code"
+		                android:textAppearance="?android:attr/textAppearanceLarge"
+		                android:textSize="16sp"
+		                android:textColor="@android:color/white" />
+		
+		            <EditText
+		                android:id="@+id/etProductCode"
+		                android:layout_width="match_parent"
+		                android:layout_height="40dp"
+		                android:layout_weight="1"
+		                android:ems="10"
+		                android:textSize="16sp"
+		                android:maxLength="16" >
+		            </EditText>
+		        </TableRow>
+		
+		        <TableRow
+		            android:id="@+id/trBarCode"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content" >
+		
+		            <TextView
+		                android:id="@+id/tvBarCode"
+		                android:layout_width="match_parent"
+		                android:text="@string/bar_code"
+		                android:textAppearance="?android:attr/textAppearanceLarge"
+		                android:textSize="16sp"
+		                android:textColor="@android:color/white" />
+		
+		            <EditText
+		                android:id="@+id/etBarCode"
+		                android:layout_width="100dp"
+		                android:layout_height="40dp"
+		                android:layout_weight="0.7"
+		                android:ems="10"
+		                android:textSize="16sp" />
+		
+		            <ImageButton
+		                android:id="@+id/ibScanBarcode"
+		                android:layout_width="80dp"
+		                android:layout_height="40dp"
+		                android:layout_weight="0.3"
+		                android:onClick="onClickScanBarcode"
+		                android:src="@drawable/btn_ic_scan" />
+		        </TableRow>
+		
+		        <TableRow
+		            android:id="@+id/trProductName"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content" >
+		
+		            <TextView
+		                android:id="@+id/tvProductName"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:text="@string/product_name"
+		                android:textAppearance="?android:attr/textAppearanceLarge"
+		                android:textSize="16sp"
+		                android:textColor="@android:color/white" />
+		
+		            <EditText
+		                android:id="@+id/etProductName"
+		                android:layout_width="match_parent"
+		                android:layout_height="40dp"
+		                android:layout_weight="1"
+		                android:ems="10"
+		                android:singleLine="true"
+		                android:textSize="16dp" />
+		        </TableRow>
+		
+		        <TableRow
+		            android:id="@+id/trProductCategory"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:weightSum="1" >
+		
+		            <TextView
+		                android:id="@+id/tvProductCategory"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:text="@string/product_category"
+		                android:textAppearance="?android:attr/textAppearanceLarge"
+		                android:textSize="16dp"
+		                android:textColor="@android:color/white" />
+		
+		            <Spinner
+		                android:id="@+id/spnProductCategory"
+		                android:layout_width="100dp"
+		                android:layout_height="40dp"
+		                android:layout_weight="0.7" />
+		
+		            <Button
+		                android:id="@+id/btnNewProductCategory"
+		                android:layout_width="80dp"
+		                android:layout_height="40dp"
+		                android:layout_weight="0.3"
+		                android:onClick="onNewProductCategory"
+		                android:text="@string/btn_new_category" />
+		        </TableRow>
+		
+		        <TableRow
+		            android:id="@+id/trProductLocation"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:weightSum="1" >
+		
+		            <TextView
+		                android:id="@+id/tvProductLocation"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:text="@string/product_location"
+		                android:textAppearance="?android:attr/textAppearanceMedium"
+		                android:textSize="16sp"
+		                android:textColor="@android:color/white" />
+		
+		            <EditText
+		                android:id="@+id/etProductLocation"
+		                android:layout_width="match_parent"
+		                android:layout_height="40dp"
+		                android:layout_weight="1"
+		                android:ems="10"
+		                android:textSize="16sp" />
+		        </TableRow>
+		
+		        <TableRow
+		            android:id="@+id/trProductQuantity"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:weightSum="1" >
+		
+		            <TextView
+		                android:id="@+id/tvProductQuantity"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:text="@string/product_quantity"
+		                android:textAppearance="?android:attr/textAppearanceMedium"
+		                android:textSize="16sp"
+		                android:textColor="@android:color/white" />
+		
+		            <EditText
+		                android:id="@+id/etProductQuantity"
+		                android:layout_width="match_parent"
+		                android:layout_height="40dp"
+		                android:layout_weight="1"
+		                android:ems="10"
+		                android:inputType="number"
+		                android:textSize="16sp" />
+		        </TableRow>
+		
+		        <TableRow
+		            android:id="@+id/trProductUnitCost"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:weightSum="1" >
+		
+		            <TextView
+		                android:id="@+id/tvProductUnitCost"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:text="@string/product_unit_cost"
+		                android:textAppearance="?android:attr/textAppearanceMedium"
+		                android:textSize="16sp"
+		                android:textColor="@android:color/white" />
+		
+		            <EditText
+		                android:id="@+id/etProductUnitCost"
+		                android:layout_width="match_parent"
+		                android:layout_height="40dp"
+		                android:layout_weight="1"
+		                android:ems="10"
+		                android:inputType="number"
+		                android:textSize="16sp" />
+		        </TableRow>
+		        <TableRow
+		            android:id="@+id/tableRow1"
+		            android:layout_marginTop="5dp"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:weightSum="1">
+		            
+		            <LinearLayout 
+		                android:layout_height="match_parent"
+		                android:layout_width="0dp"
+		                android:layout_weight="0.4">
+		                
+		               	<ImageView
+		               	    android:layout_gravity="left"
+			               	android:id="@+id/ivUploadImage"
+			               	android:layout_width="match_parent"
+			               	android:layout_height="match_parent"
+			               	android:src="@drawable/attach_image">
+		               	</ImageView>
+		            </LinearLayout>
+		            
+		            <LinearLayout
+		                android:orientation="vertical"
+		                android:layout_weight="0.6"
+		                android:layout_height="wrap_content"
+		                android:layout_width="0dp">
+		               	
+		                <Button
+			                android:id="@+id/btCaptureImage"
+			                android:layout_width="match_parent"
+			                android:layout_height="wrap_content"
+			                android:text="@string/capture_image"
+			                android:onClick="onClickCaptureImage"
+			                android:layout_weight="0.5" />
+		
+			            <Button
+			                android:id="@+id/btBrowseImage"
+			                android:layout_width="match_parent"
+			                android:layout_height="wrap_content"
+			                android:text="@string/browse_image"
+			                android:onClick="onClickBrowseImage"
+			                android:layout_weight="0.5" />
+		            </LinearLayout>
+		        </TableRow>
+	    	</TableLayout> 
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>
